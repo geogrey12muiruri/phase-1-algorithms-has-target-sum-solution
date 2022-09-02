@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for(let i = 0; i < array.length; i++){
+    const complement = target - array[i];
+    for(let j=i+1;j< array.length; j++ ){
+      if(array[j] === complement)
+      return true;
+    }
+   }
+   return false
+  
 }
 
 /* 
@@ -11,7 +19,11 @@ function hasTargetSum(array, target) {
 */
 
 /*
-  Add written explanation of your solution here
+  iteration over the  array
+// find number that adds to target
+// iteration over the remaining part of the array
+// reurn true if any number gives Xpath result
+// else return false
 */
 
 // You can run `node index.js` to view these console logs
